@@ -4,9 +4,9 @@
 
 I recently made the jump from BASH to ZSH ([this helped me get started](http://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/)), and settled on [Prezto](https://github.com/sorin-ionescu/prezto) as my configuration framework. I worked my way through every theme I could find, but none of them did *exactly* what I wanted. So I started fiddling around, and cobbled together my favorite bits of functionality from the different themes I came across. 
 
-Despite being a theme for [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh), I ended up using [itg.zsh-theme](https://github.com/itsthatguy/itg.zsh-theme) as my starting point. I was really intrigued by the GitHub status display, and wanted to try and replicate something similar using [Prezto](https://github.com/sorin-ionescu/prezto)'s Git module. Still working on that. 
+Despite being a theme for [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh), I ended up using [itg.zsh-theme](https://github.com/itsthatguy/itg.zsh-theme) as my starting point. I was really intrigued by the GitHub status display, and wanted to try and replicate something similar using [Prezto](https://github.com/sorin-ionescu/prezto)'s Git module. I got it working(somewhat), and discovered that it was not as intuitive as I was hoping. I ended up cribbing the Git status from [Pristine](http://dhruvasagar.com/2015/11/28/pristine-zsh-theme), and I have been quite happy so far. 
 
-I pulled a few pieces from Steve Losh's [Extravagent ZSH Prompt](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/), namely the right-prompt battery status. 
+I also pulled a few pieces from Steve Losh's [Extravagent ZSH Prompt](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/), namely the right-prompt battery status. For simplicities sake, I have included the script in this repo. 
 
 
 ## Installation
