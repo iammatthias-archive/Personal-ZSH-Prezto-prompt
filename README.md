@@ -11,6 +11,6 @@ I also pulled a few pieces from Steve Losh's [Extravagent ZSH Prompt](http://ste
 
 ## Installation
 
-To install the themes, copy the prompt_iam_setup file into your ~/.zprezto/modules/prompt/functions folder. 
+To install the theme, copy the prompt_iam_setup file into your ~/.zprezto/modules/prompt/functions folder. 
 
 To install the battery status script, place the file in your ~/bin/ (make sure it's in your path), and you'll be good to go. 
