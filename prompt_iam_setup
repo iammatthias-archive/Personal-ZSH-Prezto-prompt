@@ -1,1 +1,81 @@
-/Users/iammatthias/.zprezto/modules/prompt/functions/prompt_iam_setup
+# iam.zsh-theme
+# twitter: @iammatthias
+# http://iamkj.us/1mfeLih
+
+# background 39, 42, 50
+# cyan 116, 241, 198
+#
+# Colors:
+local black=235
+local dark=015
+local white=007
+local yellow=003
+local magenta=197
+local orange=003
+local cyan=006
+local blue=004
+local green=010
+local red=009
+
+local bold=''
+local dim=$dark
+local ul=''
+local blink=''
+local reverse=''
+
+local highlight=$white
+local normal=$red
+local fade=$dark
+local warning=$yellow
+local good=$cyan
+local bad=$magenta
+
+function battery_charge {
+    echo $(python ~/bin/batcharge.py)
+}
+
+function prompt_iam_setup {
+  setopt LOCAL_OPTIONS
+  unsetopt XTRACE KSH_ARRAYS
+  prompt_opts=(cr percent subst)
+
+  # Load required functions.
+  autoload -Uz add-zsh-hook
+
+  # Add hook for calling git-info before each command.
+    add-zsh-hook precmd prompt_iam_precmd
+
+  # Set git-info parameters.
+  zstyle ':prezto:module:git:info' verbose 'yes'
+  zstyle ':prezto:module:git:info:action' format ' +%s'
+  zstyle ':prezto:module:git:info:branch' format '%F{magenta}%b%f'
+  zstyle ':prezto:module:git:info:commit' format ' %F{white}%.7c%f'
+  zstyle ':prezto:module:git:info:indexed' format ' '
+  zstyle ':prezto:module:git:info:unindexed' format ' '
+  zstyle ':prezto:module:git:info:untracked' format ' '
+  zstyle ':prezto:module:git:info:clean' format ' %F{green}◆%f'
+  zstyle ':prezto:module:git:info:dirty' format ' %F{red}◆%f'
+  zstyle ':prezto:module:git:info:keys' format \
+    'prompt' ' %F%f$(coalesce "%b" "%p" "%c")${git_info[rprompt]}%s%F%f'
+
+  # Set ruby-info parameters.
+    zstyle ':prezto:module:ruby:info:version' format ' %v%f'
+
+  # Set node-info parameters.
+    zstyle ':prezto:module:node:info:version' format ' node-$(node -v)'
+}
+
+
+
+
+# command to make sure the prompt reruns the functions on new prompt
+function prompt_iam_precmd {
+  git-info
+  node-info
+  ruby-info
+  PROMPT="%F{blue}%n%{@%}$%m% %F{black}  // `ifconfig | grep "inet " | grep -v 127.0.0. | awk '{ print $2 }'` ${git_info[prompt]}
+       %F{red} ${ruby_info[version]}  %F{black}// %F{green}${node_info[version]}  %B%F{1}❯%F{3}❯%F{2}❯%f%b %F{$normal}~ %"
+  RPROMPT="${PWD/#$HOME/} $(battery_charge) %f"
+  SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [no]? '
+}
+prompt_iam_setup "$@"
