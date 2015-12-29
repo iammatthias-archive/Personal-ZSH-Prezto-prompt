@@ -1,6 +1,6 @@
 # Prezto Theme - prompt.iam.setup
 
-![Screenshot](http://i.imgur.com/vDWP9O9.jpg)
+![Screenshot](http://i.imgur.com/C3hgY1l.jpg)
 
 I recently made the jump from BASH to ZSH ([this helped me get started](http://mikebuss.com/2014/02/02/a-beautiful-productive-terminal-experience/)), and settled on [Prezto](https://github.com/sorin-ionescu/prezto) as my configuration framework. I worked my way through every theme I could find, but none of them did *exactly* what I wanted. So I started fiddling around, and cobbled together my favorite bits of functionality from the different themes I came across. 
 
