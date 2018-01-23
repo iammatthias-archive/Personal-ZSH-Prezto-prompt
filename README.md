@@ -1,4 +1,7 @@
-# Prezto Theme - prompt.iam.setup
+# I'm phasing out Prezto, and my custom prompt, in favor of a lighter setup using [Spaceship ZSH](https://denysdovhan.com/spaceship-prompt/)
+### .zshrc — https://gist.github.com/iammatthias/e7188cf8e3150f841c0b1c8db22613d8
+
+#### Prezto Theme - prompt.iam.setup
 
 ![Screenshot](http://i.imgur.com/C3hgY1l.jpg)
 
@@ -9,7 +12,7 @@ Despite being a theme for [Oh-My-ZSH](https://github.com/robbyrussell/oh-my-zsh)
 I also pulled a few pieces from Steve Losh's [Extravagent ZSH Prompt](http://stevelosh.com/blog/2010/02/my-extravagant-zsh-prompt/), namely the right-prompt battery status. For simplicities sake, I have included the script in this repo. 
 
 
-## Installation
+##### Installation
 
 To install the theme, copy the prompt_iam_setup file into your ~/.zprezto/modules/prompt/functions folder. 
 
