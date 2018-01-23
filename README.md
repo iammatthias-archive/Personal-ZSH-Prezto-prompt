@@ -1,6 +1,6 @@
 # I'm phasing out Prezto, and my custom prompt, in favor of a lighter setup using [Spaceship ZSH](https://denysdovhan.com/spaceship-prompt/)
 ### .zshrc — https://gist.github.com/iammatthias/e7188cf8e3150f841c0b1c8db22613d8
-
+---
 #### Prezto Theme - prompt.iam.setup
 
 ![Screenshot](http://i.imgur.com/C3hgY1l.jpg)
